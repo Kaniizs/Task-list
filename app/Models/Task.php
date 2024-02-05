@@ -1,10 +1,10 @@
 <?php
- 
-namespace App;
- 
+
+namespace App\Models;
+
 use App\User;
 use Illuminate\Database\Eloquent\Model;
- 
+
 class Task extends Model
 {
     /**
@@ -13,7 +13,7 @@ class Task extends Model
      * @var array
      */
     protected $fillable = ['name'];
- 
+
     /**
      * Get the user that owns the task.
      */
