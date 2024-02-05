@@ -19,8 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/tasks', [TaskController::class, 'index']);
 Route::post('/task', [TaskController::class, 'store']);
+Route::delete('/task/{task}', [TaskController::class, 'destroy']);
 
 
 Route::middleware('auth')->group(function () {

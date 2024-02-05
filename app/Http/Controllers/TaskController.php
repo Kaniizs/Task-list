@@ -42,13 +42,10 @@ class TaskController extends Controller
 
     public function destroy(Request $request, Task $task)
     {
-        // Authorize the authenticated user to delete the task.
         $this->authorize('destroy', $task);
-
-        // Delete the task.
+     
         $task->delete();
-
-        // Redirect to the '/tasks' route after deleting the task.
+     
         return redirect('/tasks');
     }
 }
